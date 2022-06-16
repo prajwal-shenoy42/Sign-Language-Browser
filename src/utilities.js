@@ -17,8 +17,8 @@ export const drawRect = (boxes, classes, scores, threshold, imgWidth, imgHeight,
             // Set styling
             ctx.strokeStyle = labelMap[text]['color']
             ctx.lineWidth = 10
-            ctx.fillStyle = 'white'
-            ctx.font = '30px Arial'         
+            ctx.fillStyle = 'black'
+            ctx.font = '20px Arial'         
             
             // DRAW!!
             ctx.beginPath()
