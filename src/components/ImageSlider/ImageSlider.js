@@ -41,11 +41,19 @@ const dotsContainerStyles = {
 };
 
 const dotStyle = {
+  color: "#fff",
   margin: "0 3px",
   cursor: "pointer",
-  fontSize: "20px",
-  color:"#fff"
-};
+  fontSize: "20px"
+}
+
+const dotSelected = {
+  color : "red",
+  margin: "0 3px",
+  cursor: "pointer",
+  fontSize: "20px"
+}
+
 
 const ImageSlider = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -81,7 +89,7 @@ const ImageSlider = ({ slides }) => {
       <div style={dotsContainerStyles}>
         {slides.map((slide, slideIndex) => (
           <div
-            style={dotStyle}
+            style={( currentIndex===slideIndex)? dotSelected : dotStyle}
             key={slideIndex}
             onClick={() => goToSlide(slideIndex)}
           >

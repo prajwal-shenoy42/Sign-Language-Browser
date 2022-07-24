@@ -16,7 +16,6 @@ function App() {
   return (
     <div className="App">
       <Navbar show={show} showCam={toggleShow} />
-      {/* <Intro /> */}
       {!show && (
         <div style={{ margin: "0 auto", paddingTop: "12%" }}>
           <Demo />
