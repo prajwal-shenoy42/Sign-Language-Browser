@@ -12,8 +12,7 @@ const Demo = () => {
   const containerStyles = {
     width: "400px",
     height: "400px",
-    margin: "0 auto",
-    marginTop: "0 auto"
+    margin: "0 auto"
   };
   return (
     <div>

@@ -1,10 +1,10 @@
 // Import dependencies
 import React, { useState } from "react";
 import "./App.css";
-
-import DenseAppBar from "./components/AppBar/DenseAppBar";
 import Demo from "./components/demo";
-import WebCam from "./components/webCam";
+import Navbar from "./components/Navbar/Navbar";
+import WebCam from "./components/WebCam";
+import Intro from "./components/Intro/Intro"
 
 function App() {
   const [show, setShow] = useState(false);
@@ -15,9 +15,10 @@ function App() {
 
   return (
     <div className="App">
-      <DenseAppBar show={show} showCam={toggleShow} />
+      <Navbar show={show} showCam={toggleShow} />
+      {/* <Intro /> */}
       {!show && (
-        <div style={{ margin: "0 auto", marginTop: "80px" }}>
+        <div style={{ margin: "0 auto", paddingTop: "12%" }}>
           <Demo />
         </div>
       )}

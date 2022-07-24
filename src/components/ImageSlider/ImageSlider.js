@@ -12,7 +12,7 @@ const rightArrowStyles = {
   position: "absolute",
   top: "50%",
   transform: "translate(0, -50%)",
-  right: "20px",
+  right: "10px",
   fontSize: "45px",
   color: "black",
   zIndex: 1,
@@ -23,7 +23,7 @@ const leftArrowStyles = {
   position: "absolute",
   top: "50%",
   transform: "translate(0, -50%)",
-  left: "20px",
+  left: "10px",
   fontSize: "45px",
   color: "black",
   zIndex: 1,
@@ -44,6 +44,7 @@ const dotStyle = {
   margin: "0 3px",
   cursor: "pointer",
   fontSize: "20px",
+  color:"#fff"
 };
 
 const ImageSlider = ({ slides }) => {

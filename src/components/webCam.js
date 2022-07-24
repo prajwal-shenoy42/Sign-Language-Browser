@@ -1,7 +1,7 @@
 import React from "react";
 import { useRef, useEffect } from "react";
 import Webcam from "react-webcam";
-import { drawRect } from "../utilities"
+import { drawRect } from "../utilities";
 import * as tf from "@tensorflow/tfjs";
 
 export default function WebCam() {
@@ -67,7 +67,7 @@ export default function WebCam() {
           boxes[0],
           classes[0],
           scores[0],
-          0.6,
+          0.7,
           videoWidth,
           videoHeight,
           ctx
@@ -82,39 +82,37 @@ export default function WebCam() {
     }
   };
   return (
-    <div>
-      <header className="App-header">
-        <Webcam
-          ref={webcamRef}
-          muted={true}
-          style={{
-            position: "absolute",
-            marginLeft: "auto",
-            marginRight: "auto",
-            left: 0,
-            right: 0,
-            textAlign: "center",
-            zindex: 9,
-            width: 640,
-            height: 480,
-          }}
-        />
+    <div style={{ margin: "0 auto", paddingTop: "110px" }}>
+      <Webcam
+        ref={webcamRef}
+        muted={true}
+        style={{
+          position: "absolute",
+          marginLeft: "auto",
+          marginRight: "auto",
+          left: 0,
+          right: 0,
+          textAlign: "center",
+          zindex: 9,
+          width: 640,
+          height: 480,
+        }}
+      />
 
-        <canvas
-          ref={canvasRef}
-          style={{
-            position: "absolute",
-            marginLeft: "auto",
-            marginRight: "auto",
-            left: 0,
-            right: 0,
-            textAlign: "center",
-            zindex: 8,
-            width: 640,
-            height: 480,
-          }}
-        />
-      </header>
+      <canvas
+        ref={canvasRef}
+        style={{
+          position: "absolute",
+          marginLeft: "auto",
+          marginRight: "auto",
+          left: 0,
+          right: 0,
+          textAlign: "center",
+          zindex: 8,
+          width: 640,
+          height: 480,
+        }}
+      />
     </div>
   );
 }
