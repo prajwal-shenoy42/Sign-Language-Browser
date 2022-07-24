@@ -3,11 +3,11 @@ import ImageSlider from "./ImageSlider/ImageSlider"
 
 const Demo = () => {
   const slides = [
-    { url: "http://localhost:3000/hello.jpeg", title: "Hello" },
-    { url: "http://localhost:3000/yes.jpg", title: "Yes" },
-    { url: "http://localhost:3000/no.jpeg", title: "No" },
-    { url: "http://localhost:3000/thankyou.jpg", title: "Thank You" },
-    { url: "http://localhost:3000/iloveyou.jpeg", title: "I Love You" },
+    { url: "/hello.jpeg", title: "Hello" },
+    { url: "/yes.jpg", title: "Yes" },
+    { url: "/no.jpeg", title: "No" },
+    { url: "/thankyou.jpg", title: "Thank You" },
+    { url: "/iloveyou.jpeg", title: "I Love You" },
   ];
   const containerStyles = {
     width: "400px",

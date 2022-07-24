@@ -1,27 +1,16 @@
 // Import dependencies
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
-import Demo from "./components/demo";
-import Navbar from "./components/Navbar/Navbar";
-import WebCam from "./components/WebCam";
-import Intro from "./components/Intro/Intro"
+import NavbarIntro from "./components/Navbar/NavbarIntro";
+
+import Intro from "./components/Intro/Intro";
+import Learn from "./components/Learn/Learn";
 
 function App() {
-  const [show, setShow] = useState(false);
-
-  const toggleShow = () => {
-    setShow(!show);
-  };
-
   return (
     <div className="App">
-      <Navbar show={show} showCam={toggleShow} />
-      {!show && (
-        <div style={{ margin: "0 auto", paddingTop: "12%" }}>
-          <Demo />
-        </div>
-      )}
-      {show && <WebCam />}
+      <NavbarIntro />
+      <Intro />
     </div>
   );
 }
